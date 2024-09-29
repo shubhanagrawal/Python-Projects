@@ -5,12 +5,13 @@ n=random.randint(1,100)
 a=-1
 guesses=0
 while(a!=n):
-    guesses+=1
-    a=int(input("Guess a Number"))
+    a=int(input("Guess a Number "))
     if(a>n):
         print("Lower Number Please")
-    else:
+        guesses+=1
+    elif(a<n):
         print("Higher Number Please")
+    guesses+=1
 
-print(f"You have guessed the number correctly in {guesses} attempt")        
+print(f"You have guessed the number correctly in {guesses-1} attempt")        
  
